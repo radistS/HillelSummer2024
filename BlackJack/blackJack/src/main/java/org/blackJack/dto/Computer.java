@@ -1,5 +1,7 @@
 package org.blackJack.dto;
 
+import java.util.List;
+import java.util.Stack;
 import org.blackJack.service.GameService;
 
 public class Computer {
@@ -13,4 +15,7 @@ public class Computer {
         return gameService.getComputerHand();
     }
 
+    public List<Card> getHand(Stack<Card> deck){
+        return gameService.generateComputerHand(deck);
+    }
 }

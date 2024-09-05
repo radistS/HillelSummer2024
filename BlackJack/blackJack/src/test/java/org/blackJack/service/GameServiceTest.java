@@ -7,13 +7,18 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 import org.blackJack.dto.Card;
+import org.blackJack.dto.GameResult;
 import org.blackJack.dto.Rank;
 import org.blackJack.dto.Suit;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 class GameServiceTest {
 
@@ -68,5 +73,24 @@ class GameServiceTest {
 
         int score = gs.calculateHandScore(hand);
         assertEquals( 21, score);
+    }
+
+    @ParameterizedTest
+    @MethodSource("points")
+    void getGameResult(int computer, int player, GameResult expected) {
+        GameService gs = new GameService();
+        assertEquals(expected, gs.getGameResult(computer, player));
+    }
+
+    private static Stream<Arguments> points() {
+        return Stream.of(
+            Arguments.of(21, 21, GameResult.DRAW),
+            Arguments.of(22, 22, GameResult.LOSE),
+            Arguments.of(18, 22, GameResult.COMPUTER),
+            Arguments.of(22, 18, GameResult.PLAYER),
+            Arguments.of(18, 17, GameResult.COMPUTER),
+            Arguments.of(14, 20, GameResult.PLAYER),
+            Arguments.of(18, 18, GameResult.DRAW)
+        );
     }
 }
