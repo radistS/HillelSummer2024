@@ -36,8 +36,8 @@ public class WordFileProcessor {
 
         for (File file : files) {
             TextFileProcessorTask task = new TextFileProcessorTask(file); // task
-            Future<BigDecimal> future = executor.submit(task);
-            futures.add(future);
+//            Future<BigDecimal> future = executor.submit(task);
+//            futures.add(future);
         }
 
         for (Future<BigDecimal> future : futures) {
