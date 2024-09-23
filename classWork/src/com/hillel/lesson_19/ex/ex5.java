@@ -15,5 +15,3 @@ public class ex5 {
         System.out.println(mass.length + list.size() + 2);
     }
 }
-
-

@@ -28,3 +28,6 @@ lesson_20/file/CurrentDirectory.java
 file.json -> file.yaml; 10c; old_size -> new_size
 file1.yaml -> file1.json; 5c; old_size1 -> new_size1
 file2.json -> not converted
+
+
+read -- conveet -- write (.yaml/.json -> .log)

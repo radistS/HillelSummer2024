@@ -41,7 +41,8 @@ public class UserDomExample {
                         eElement.getElementsByTagName("lastName").item(0).getTextContent(),
                         Integer.valueOf(eElement.getElementsByTagName("age").item(0).getTextContent()),
                         eElement.getElementsByTagName("email").item(0).getTextContent(),
-                        eElement.getElementsByTagName("technology").item(0).getTextContent()
+                        eElement.getElementsByTagName("technology").item(0).getTextContent(),
+                    ""
                 ));
             }
         }

@@ -9,7 +9,7 @@ import org.yaml.snakeyaml.constructor.Constructor;
 public class YamlParceAll {
     public static void main(String[] args) {
         Yaml yaml = new Yaml(new Constructor(UserFull.class));
-        String yamlStr = ReadFromFile.readToString("/Users/oleksandrstepurko/IdeaProjects/HillelJavaWinter2024/mvnProjects/pars/src/main/resources/userClass.yaml");
+        String yamlStr = ReadFromFile.readToString("/Users/oleksandrstepurko/IdeaProjects/HillelSummer2024_upd/mvnProjects/pars/src/main/resources/userClass.yaml");
         UserExt user = yaml.load(yamlStr);
         System.out.println(user);
         System.out.println("--------");

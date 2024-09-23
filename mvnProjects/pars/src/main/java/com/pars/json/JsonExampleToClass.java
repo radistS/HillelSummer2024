@@ -16,19 +16,20 @@ public class JsonExampleToClass {
                 "        'age': '40'," +
                 "        'workAge': '7'," +
                 "        'email': 'stepurko@info.com'," +
-                "        'technology': 'Java'" +
+                "        'technology': 'Java'," +
+                "        'technology_fe': 'React'" +
                 "      }";
 //         Gson lib example
-        Gson gson = new Gson();
-        User user = gson.fromJson(json, User.class);
-        System.out.println(user.toString());
-        user.setTechnology("PHP");
-        System.out.println(gson.toJson(user));
-
-        User user1 = gson.fromJson(gson.toJson(user), User.class);
-
-        System.out.println(user.hashCode());
-        System.out.println(user1.hashCode());
+//        Gson gson = new Gson();
+//        User user = gson.fromJson(json, User.class);
+//        System.out.println(user.toString());
+//        user.setTechnology("React");
+//        System.out.println(gson.toJson(user));
+//
+//        User user1 = gson.fromJson(gson.toJson(user), User.class);
+//
+//        System.out.println(user.hashCode());
+//        System.out.println(user1.hashCode());
 
 //        // jackson lib example
 
@@ -40,6 +41,6 @@ public class JsonExampleToClass {
         System.out.println(us.toString());
 
         System.out.println(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(us));
-//        System.out.println(objectMapper.writeValueAsString(us));
+        System.out.println(objectMapper.writeValueAsString(us));
     }
 }

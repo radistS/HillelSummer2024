@@ -8,9 +8,11 @@ import java.util.Map;
 public class YamlParce {
     public static void main(String[] args) {
         Yaml yaml = new Yaml();
-        String yamlStr = ReadFromFile.readToString("/Users/oleksandrstepurko/IdeaProjects/HillelJavaWinter2024/mvnProjects/pars/src/main/resources/user.yaml");
+        // from Yaml to String
+        String yamlStr = ReadFromFile.readToString("/Users/oleksandrstepurko/IdeaProjects/HillelSummer2024_upd/mvnProjects/pars/src/main/resources/user.yaml");
         Map<String, Object> obj = yaml.load(yamlStr);
 //        System.out.println(obj);
+        // from String to Yaml
         System.out.println(yaml.dump(obj));
     }
 }

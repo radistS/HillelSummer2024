@@ -35,7 +35,7 @@ public class UserDomExample_1 {
                     , attributes.getNamedItem("lastName").getNodeValue()
                     , Integer.valueOf(attributes.getNamedItem("age").getNodeValue())
                     , attributes.getNamedItem("email").getNodeValue()
-                    , attributes.getNamedItem("technology").getNodeValue()
+                    , attributes.getNamedItem("technology").getNodeValue(), ""
             ));
         }
 

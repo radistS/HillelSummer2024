@@ -44,12 +44,13 @@ public class UserSaxExample extends DefaultHandler {
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
             if (qName.equals("user")) {
+                System.out.println("user ->>");
                 String firstName = attributes.getValue("firstName");
                 String lastName = attributes.getValue("lastName");
                 String age = attributes.getValue("age");
                 String email = attributes.getValue("email");
                 String technology = attributes.getValue("technology");
-                userList.add(new User(firstName, lastName, Integer.valueOf(age), email, technology)); // add user
+                userList.add(new User(firstName, lastName, Integer.valueOf(age), email, technology, "")); // add user
             } else if (qName.equals("admin")) {
                 String firstName = attributes.getValue("firstName");
                 String lastName = attributes.getValue("lastName");

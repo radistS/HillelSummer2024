@@ -1,0 +1,30 @@
+id: 4082ac1e-5aeb-441d-a0d4-40949b46b2bb
+name: Abdullah
+email: 1006881989@yopmail.com
+birthdate: '1998-11-10'
+birthdateFromQiwa: false
+nameFromQiwa: false
+roles:
+  - TRAINEE
+  - TRAINING_PROVIDER
+  - EMPLOYER
+  - SECTORIAL_ADMIN
+  - MINISTRY_EMPLOYEE
+language: EN
+firstLogin: false
+login: null
+instructor: null
+trainingProviderOrganizationId: e037a2ea-83dc-4074-bfc1-4108544b80cd
+initialModalWindow: null
+wadEmployerFormSubmitted: true
+wadTPFormSubmitted: true
+wadTrainingProvider: true
+wadEmployer: false
+wadTrainingProviderApprovalDate: '2024-08-15T11:54:42.071478'
+wadEmployerApprovalDate: null
+organizationName: مركز التدريب الوطني
+trainingProviderName: مركز التدريب الوطني
+traineeOrganizationName: null
+nationalId: 1006881989
+iqamaId: null
+phone: '+966559411118'

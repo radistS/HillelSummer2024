@@ -70,7 +70,7 @@ public class UserSaxExample_1 extends DefaultHandler {
                     && (email != null && !email.isEmpty())
                     && (technology != null && !technology.isEmpty())
             ) {
-                userList.add(new User(firstName, lastName, Integer.valueOf(age), email, technology));
+                userList.add(new User(firstName, lastName, Integer.valueOf(age), email, technology, ""));
                 firstName = null;
                 lastName = null;
                 age = null;

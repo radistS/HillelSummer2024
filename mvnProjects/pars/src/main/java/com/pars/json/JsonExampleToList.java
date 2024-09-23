@@ -17,7 +17,7 @@ public class JsonExampleToList {
 
     @SneakyThrows
     public static void main(String[] args) {
-       String json = ReadFromFile.readToString("/Users/oleksandrstepurko/IdeaProjects/HillelSummer2024/mvnProjects/pars/src/main/resources/phoneBook.json");
+       String json = ReadFromFile.readToString("/Users/oleksandrstepurko/IdeaProjects/HillelSummer2024_upd/mvnProjects/pars/src/main/resources/phoneBook.json");
 
         Gson gson = new Gson();
         User[] user = gson.fromJson(json, User[].class);
