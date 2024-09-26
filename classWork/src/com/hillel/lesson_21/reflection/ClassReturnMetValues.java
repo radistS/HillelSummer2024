@@ -18,10 +18,10 @@ public class ClassReturnMetValues {
 
         Annotation[] annotations = method.getAnnotations();
         System.out.println(Arrays.toString(annotations));
-
+        System.out.println("-------------");
         annotations = boo.getAnnotations();
         System.out.println(Arrays.toString(annotations));
-
+        System.out.println("-------------");
         Class<?>[] exceptionTypes = method.getExceptionTypes();
         System.out.println(Arrays.toString(exceptionTypes));
     }
@@ -31,6 +31,7 @@ public class ClassReturnMetValues {
 @Builder
 @EqualsAndHashCode
 @Deprecated
+@TestSource
 class Boo {
     @Deprecated
     public String print() throws SQLException, ArithmeticException {
